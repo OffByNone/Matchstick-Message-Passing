@@ -16,8 +16,8 @@
         
         //messages can be of any type. Including complex josn objects;
         var message = { data: 'receiver app says hello' };
-        //sending from the receiver either seems to send malformed JSON or nothing at all
-        messageChannel.send(message); //messages must be stringified if json
+
+        messageChannel.send(JSON.stringify(message)); //messages must be stringified if json
     });
     
     receiverManager.open();    
